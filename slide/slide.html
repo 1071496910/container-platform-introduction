@@ -1,0 +1,246 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>容器平台介绍 - By 和盼晨</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.moon.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>容器平台介绍</h1>
+<p><small>作者：和盼晨</small></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>目录</h1>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
+<ul>
+<li><a href="#2" target="_blank">容器平台</a><ul>
+<li><a href="#3" target="_blank">特性</a></li>
+<li><a href="#4" target="_blank">docker介绍</a><ul>
+<li><a href="#5" target="_blank">什么是容器</a><ul>
+<li><a href="#6" target="_blank">linux命名空间</a></li>
+</ul>
+</li>
+<li><a href="#7" target="_blank">最简单的container</a></li>
+<li><a href="#8" target="_blank">kubernetes</a></li>
+</ul>
+</li>
+<li><a href="10" target="_blank">平台架构</a><ul>
+<li><a href="#11" target="_blank">k8s组件</a></li>
+<li><a href="#12" target="_blank">calico</a><ul>
+<li><a href="#13" target="_blank">calico 组件</a></li>
+<li><a href="#14" target="_blank">calico 架构</a></li>
+</ul>
+</li>
+<li><a href="#15" target="_blank">monitor</a></li>
+<li><a href="#16" target="_blank">monitor(新)</a></li>
+<li><a href="#17" target="_blank">日志系统</a></li>
+</ul>
+</li>
+<li><a href="#18" target="_blank">发布系统</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>容器平台</h1>
+<p><small> 基于docker和kubernetes的paas平台</small></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>特性</h2>
+<ul>
+<li>提高资源使用率</li>
+<li>环境一致</li>
+<li>自动扩缩容</li>
+<li>自动故障恢复</li>
+<li>自动滚动升级</li>
+<li>自动服务发现</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>docker介绍</h2>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>什么是容器</h3>
+<img src="./assets/markdown-img-paste-20180706103022546.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h4>linux命名空间</h4>
+<img src="./assets/markdown-img-paste-20180706103607527.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>最简单的container</h3>
+<img src="./assets/markdown-img-paste-20180706115626337.png" alt="">
+<img src="./assets/container-sh.gif" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>kubernetes</h3>
+<img src="./assets/markdown-img-paste-20180706104939784.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<ul>
+<li>pod<ul>
+<li>一组容器，同一个Pod里的容器共享同一个网络命名空间，可以使用localhost互相通信。k8s调度的基本单位。</small></li>
+</ul>
+</li>
+<li>service<ul>
+<li>Service是定义一系列Pod以及访问这些Pod的策略的一层抽象。Service通过Label找到Pod组。</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>平台架构</h2>
+<img src="./assets/markdown-img-paste-20180705204537341.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>k8s组件</h3>
+<img src="./assets/markdown-img-paste-20180705204839726.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>calico</h3>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h4>calico 组件</h4>
+<img src="./assets/markdown-img-paste-2018070520500947.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h4>calico 架构</h4>
+<img src="./assets/markdown-img-paste-20180705204927536.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>monitor</h3>
+<img src="./assets/markdown-img-paste-2018070520520887.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>monitor(新)</h3>
+<img src="./assets/markdown-img-paste-20180705205258708.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h3>日志系统</h3>
+<img src="./assets/markdown-img-paste-20180705210420582.png" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2>发布系统</h2>
+
+</hgroup><article>
+
+<p><a href="http://d.zcontainer.meizu.com:8421" target="_blank">http://d.zcontainer.meizu.com:8421</a></p>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide3',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  config: ["TeX-AMS-MML_HTMLorMML.js"],
+  tex2jax: {inlineMath: [['\\(','\\)']]}});
+  //['$','$'], 避免货币价格冲突
+</script>
+<script type="text/javascript" src="./js/mathjax/MathJax.js"></script>
+
+<!--placeholder-->
+</body>
+</html>
